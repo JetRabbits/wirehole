@@ -31,11 +31,12 @@ services:
       - PGID=1000
       - TZ=Europe/London # Change to your timezone
       - SERVERPORT=51820
-      #- SERVERURL=my.ddns.net #optional - For use with DDNS (Uncomment to use)
+      - SERVERURL=wireguard.jetrabbits.com
+      - VIRTUAL_PORT=51820
+      - VIRTUAL_HOST=wireguard.jetrabbits.com
       - PEERS=1 # How many peers to generate for you (clients)
       - PEERDNS=10.2.0.100 # Set it to point to pihole
       - INTERNAL_SUBNET=10.6.0.0
-      
     volumes:
       - ./wireguard:/config
       - /lib/modules:/lib/modules
@@ -46,7 +47,6 @@ services:
       - 10.2.0.200 # Points to unbound
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
-
     restart: unless-stopped
     networks:
       jetrabbits-network:
