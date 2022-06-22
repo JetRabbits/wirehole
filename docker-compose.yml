@@ -21,7 +21,7 @@ services:
 
   wireguard:
     depends_on: [unbound, pihole]
-    image: lsiodev/wireguard
+    image: linuxserver/wireguard
     container_name: wireguard
     cap_add:
       - NET_ADMIN
