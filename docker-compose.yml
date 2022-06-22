@@ -31,9 +31,9 @@ services:
       - PGID=1000
       - TZ=Europe/London # Change to your timezone
       - SERVERPORT=51820
-      - SERVERURL=wireguard.jetrabbits.com
-      - VIRTUAL_PORT=51820
-      - VIRTUAL_HOST=wireguard.jetrabbits.com
+#      - SERVERURL=wireguard.jetrabbits.com
+#      - VIRTUAL_PORT=51820
+#      - VIRTUAL_HOST=wireguard.jetrabbits.com
       - PEERS=1 # How many peers to generate for you (clients)
       - PEERDNS=10.2.0.100 # Set it to point to pihole
       - INTERNAL_SUBNET=10.6.0.0
